@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.1.1/tailwind.min.css">
+    <link rel="stylesheet" href="main.css">
+    <title>Clic Builder Git Commit</title>
+</head>
+
+<body class="text-center bg-gray-900 min-h-screen cursor-default">
+    <div id="pageOne">
+        <h1 class="text-4xl text-white font-extrabold m-20">Git Commit Automatisation</h1>
+        <h2 class="text-2xl text-white font-extrabold mb-10 mx-10">Clic to select the type of the commit</h2>
+        <div class="m-10">
+            <div id="typeCards" class="grid grid-cols-3 gap-5 ">
+                <!-- Card -->
+
+            </div>
+            <p class="text-l text-white m-10 italic">hover to display more information about the context you can use the
+                category</p>
+
+
+        </div>
+    </div>
+
+
+    <div id="pageTwo" class="min-h-screen hidden">
+        <div>
+            <h1 class="text-4xl text-white font-extrabold m-10">Git Commit Automatisation</h1>
+            <h2 class="text-2xl text-white font-extrabold mb-10 mx-10">Type the scope</h2>
+            <h2 class="text-3xl text-white font-extrabold mb-10 mx-10">Scope</h2>
+            <h3 class="text-2xl text-white font-extrabold mb-10 mx-10">"scope" is optional
+                Scope must be noun and it represents the section of the section of the codebase</h3>
+            <input class="block mx-auto text-3xl rounded-xl p-5 w-1/2" type="text" name="" id="scope" placeholder="">
+            <button onclick="scopeOnClick()" class="bg-green-400 p-4 rounded-xl mt-12 hover:bg-green-600 w-52 font-extrabold">Validate</button>
+            <button onclick="returnToType()" class="bg-yellow-200 p-4 rounded-xl mt-12 hover:bg-yellow-400 font-extrabold">return to previous step</button>
+        </div>
+    </div>
+
+    <div id="pageThree" class="min-h-screen hidden">
+        <h1 class="text-4xl text-white font-extrabold m-10">Git Commit Automatisation</h1>
+        <h2 class="text-2xl text-white font-extrabold mb-10 mx-10">Type the subject</h2>
+        <h2 class="text-3xl text-white font-extrabold mb-10 mx-10">Subject</h2>
+        <h3 class="text-2xl text-white font-extrabold mb-10 mx-10">"subject"
+            use imperative, present tense (eg: use "add" instead of "added" or "adds")
+            don't use dot(.) at end
+            don't capitalize first letter</h3>
+        <textarea id="subject" class="block mx-auto text-3xl rounded-xl p-5 w-1/2 center" rows="5" cols="60" name="text"
+            placeholder="Enter subject"></textarea>
+        <button onclick="subjectOnClick()" class="bg-green-400 p-4 rounded-xl mt-12 hover:bg-green-600 w-52 font-extrabold">Validate</button>
+        <button onclick="returnToScope()" class="bg-yellow-200 p-4 rounded-xl mt-12 hover:bg-yellow-400 font-extrabold">return to previous step</button>
+    </div>
+
+
+    <div id="pageResults" class="min-h-screen hidden">
+        <h1 class="text-4xl text-white font-extrabold m-10">Git Commit Automatisation</h1>
+        <h2 class="text-2xl text-white font-extrabold mb-10 mx-10">You can copy the result of your git commit</h2>
+        <h2 class="text-4xl text-white font-extrabold mb-10 mx-10">Result</h2>
+        <input  class="block mx-auto text-3xl rounded-xl p-5 w-1/2" type="text" name="result" id="result">
+        <button onclick="createFinalString()" class="bg-green-400 p-4 rounded-xl mt-12 hover:bg-green-600 w-52 font-extrabold">Copy for GIT</button>
+        <button onclick="returnToSubject()" class="bg-yellow-200 p-4 rounded-xl mt-12 hover:bg-yellow-400 font-extrabold">return to previous step</button>
+
+    </div>
+
+</body>
+<script src="./script.js"></script>
+
+</html>
